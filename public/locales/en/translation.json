@@ -1,0 +1,53 @@
+{
+  "navbar": {
+    "brand_caftan": "CAFTAN",
+    "brand_lamaa": "LAMAA",
+    "search": "Search",
+    "login": "Login",
+    "cart": "Cart"
+  },
+  "hero": {
+    "title_caftan": "CAFTAN",
+    "title_lamaa": "LAMAA",
+    "description": "Discover the timeless elegance of Algerian craftsmanship. Our caftans, symbols of refinement and heritage, blend tradition and modernity — hand-woven with gold threads and noble fabrics.",
+    "cta": "Discover the collection"
+  },
+  "collections": {
+    "title": "Our Collections",
+    "rubis": "Ruby",
+    "ivoire": "Ivory",
+    "saphir": "Sapphire",
+    "marron": "Brown",
+    "emeraude": "Emerald",
+    "ebene": "Ebony",
+    "view_details": "View details"
+  },
+  "atelier": {
+    "title": "Our Workshop",
+    "text": "For three generations, our workshop has perpetuated the ancestral art of the Algerian caftan. Each piece is unique, hand-woven with gold and silver threads, adorned with traditional motifs revisited with a contemporary touch. Our master craftsmen put all their know-how at the service of your elegance.",
+    "cta": "Discover our expertise"
+  },
+  "boutique": {
+    "title": "Our Boutique in Algiers",
+    "subtitle": "Come meet us",
+    "address_label": "Address:",
+    "hours_label": "Hours:",
+    "phone_label": "Phone:",
+    "email_label": "Email:",
+    "rdv": "Book an appointment",
+    "address": "123 Rue Didouche Mourad, Algiers Center, 16000",
+    "hours": "Mon - Sat: 10am - 7pm",
+    "phone": "+213 (0) 21 23 45 67",
+    "email": "boutique@caftanlamaa.dz"
+  },
+  "footer": {
+    "legal": "Legal Notice",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "copyright": "© 2025 Caftan Lamaa - Algerian Haute Couture. All rights reserved."
+  },
+  "common": {
+    "price": "{{prix}} DZD"
+  }
+}

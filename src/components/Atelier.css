@@ -1,0 +1,69 @@
+.atelier {
+  background: #1a1a1a; /* fond sombre */
+  position: relative;
+  padding: 6rem 2rem;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.atelier::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20,20 Q50,0 80,20 Q100,50 80,80 Q50,100 20,80 Q0,50 20,20" fill="none" stroke="%23d4af37" stroke-width="2"/><path d="M30,30 Q50,20 70,30 Q80,50 70,70 Q50,80 30,70 Q20,50 30,30" fill="none" stroke="%23d4af37" stroke-width="2"/></svg>') repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.atelier-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.atelier h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1.5rem;
+  color: #d4af37;
+}
+
+.ornement {
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  margin: 2rem auto;
+}
+
+.atelier-texte {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #f0f0f0;
+}
+
+.btn-atelier {
+  background-color: transparent;
+  color: #d4af37;
+  padding: 1rem 3rem;
+  border: 2px solid #d4af37;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.btn-atelier:hover {
+  background-color: #d4af37;
+  color: #000;
+}

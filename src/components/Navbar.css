@@ -1,0 +1,67 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #e8d5b5; /* Beige chaud - plus chaud que le précédent */
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-left a,
+.navbar-right svg {
+  color: #000;
+  margin: 0 0.75rem;
+  font-size: 1.4rem;
+  transition: color 0.3s;
+}
+
+.navbar-left a:hover,
+.navbar-right svg:hover {
+  color: #d4af37; /* gold */
+}
+
+.navbar-center .brand {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  margin: 0;
+}
+
+.brand-caftan {
+  color: #000;
+}
+
+.brand-lamaa {
+  color: #d4af37;
+}
+.language-selector {
+  display: inline-flex;
+  margin-left: 1rem;
+  border-left: 1px solid #000;
+  padding-left: 1rem;
+}
+
+.language-selector button {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  color: #000;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.language-selector button.active {
+  opacity: 1;
+  color: #d4af37;
+}
+
+.language-selector button:hover {
+  opacity: 1;
+}

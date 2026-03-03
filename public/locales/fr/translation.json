@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "brand_caftan": "CAFTAN",
+    "brand_lamaa": "LAMAA",
+    "search": "Rechercher",
+    "login": "Se connecter",
+    "cart": "Panier"
+  },
+  "hero": {
+    "title": "Caftan Lamaa",
+    "description": "Description en français..."
+  }
+  
+}
