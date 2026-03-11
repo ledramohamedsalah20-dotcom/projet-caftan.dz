@@ -7,8 +7,130 @@
     "cart": "Panier"
   },
   "hero": {
-    "title": "Caftan Lamaa",
-    "description": "Description en français..."
+    "title_caftan": "CAFTAN",
+    "title_lamaa": "LAMAA",
+    "description": "Découvrez l'élégance séculaire de l'artisanat algérien. Nos caftans, symboles de raffinement et d'héritage, marient tradition et modernité — tissés à la main avec des fils d'or et des étoffes nobles.",
+    "cta": "Découvrir la collection"
+  },
+  "collections": {
+    "title": "Nos Collections",
+    "rubis": "Rubis",
+    "ivoire": "Ivoire",
+    "saphir": "Saphir",
+    "marron": "Marron",
+    "emeraude": "Émeraude",
+    "ebene": "Ébène",
+    "view_details": "Voir détails",
+    "add_to_cart": "Ajouter au panier"
+  },
+  "atelier": {
+    "title": "Notre Atelier",
+    "text": "Depuis trois générations, notre atelier perpétue l'art ancestral du caftan algérien. Chaque pièce est unique, tissée à la main avec des fils d'or et d'argent, ornée de motifs traditionnels revisités avec une touche contemporaine. Nos maîtres artisans mettent tout leur savoir-faire au service de votre élégance.",
+    "cta": "Découvrir notre savoir-faire"
+  },
+  "boutique": {
+    "title": "Notre Boutique à Alger",
+    "subtitle": "Venez nous rencontrer",
+    "address_label": "Adresse :",
+    "address": "123 Rue Didouche Mourad, Alger Centre, 16000",
+    "hours_label": "Horaires :",
+    "hours": "Lun - Sam : 10h - 19h",
+    "phone_label": "Téléphone :",
+    "phone": "+213 (0) 21 23 45 67",
+    "email_label": "Email :",
+    "email": "boutique@caftanlamaa.dz",
+    "rdv": "Prendre rendez-vous"
+  },
+  "footer": {
+    "legal": "Mentions Légales",
+    "terms": "CGV",
+    "privacy": "Confidentialité",
+    "contact": "Contact",
+    "copyright": "© 2025 Caftan Lamaa - Haute Couture Algérienne. Tous droits réservés."
+  },
+  "cart": {
+    "title": "Votre Panier",
+    "empty": "Votre panier est vide",
+    "total": "Total",
+    "checkout": "Passer la commande"
+  },
+  "search": {
+    "title": "Rechercher",
+    "placeholder": "Tapez votre recherche...",
+    "search": "Rechercher",
+    "suggestions": "Suggestions",
+    "results_for": "Résultats pour",
+    "results": "résultats",
+    "result": "résultat",
+    "loading": "Recherche en cours...",
+    "no_results": "Aucun résultat trouvé.",
+    "try_again": "Essayez avec d'autres mots-clés."
+  },
+  "avis": {
+    "title": "Avis de nos clients",
+    "note_moyenne": "Note moyenne",
+    "total_avis": "Avis",
+    "recommandent": "Recommandent",
+    "laisser_avis": "Laissez votre avis",
+    "votre_nom": "Votre nom",
+    "votre_note": "Votre note",
+    "votre_commentaire": "Votre commentaire",
+    "envoyer": "Envoyer mon avis",
+    "sending": "Envoi en cours...",
+    "success": "Merci pour votre avis !",
+    "verified": "Achat vérifié",
+    "delete": "Supprimer",
+    "confirm_delete": "Êtes-vous sûr de vouloir supprimer cet avis ?",
+    "avis_recents": "Avis récents",
+    "nom_placeholder": "Ex: Mohamed A.",
+    "commentaire_placeholder": "Partagez votre expérience...",
+    "no_avis": "Soyez le premier à donner votre avis !"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "info_title": "Nos coordonnées",
+    "form_title": "Envoyez-nous un message",
+    "map_title": "Nous trouver",
+    "name": "Nom complet",
+    "name_placeholder": "Votre nom",
+    "email": "Email",
+    "email_placeholder": "votre@email.com",
+    "message": "Message",
+    "message_placeholder": "Votre message...",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.",
+    "address_label": "Adresse",
+    "phone_label": "Téléphone",
+    "email_label": "Email",
+    "hours_label": "Horaires d'ouverture",
+    "hours": "Lundi - Samedi : 10h - 19h",
+    "hours_sunday": "Dimanche : Fermé"
+  },
+  "auth": {
+    "login_title": "Connexion",
+    "register_title": "Inscription",
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "logging_in": "Connexion en cours...",
+    "registering": "Inscription en cours...",
+    "email": "Email",
+    "email_placeholder": "votre@email.com",
+    "password": "Mot de passe",
+    "password_placeholder": "********",
+    "confirm_password": "Confirmer le mot de passe",
+    "confirm_password_placeholder": "********",
+    "name": "Nom complet",
+    "name_placeholder": "Votre nom",
+    "password_mismatch": "Les mots de passe ne correspondent pas",
+    "password_short": "Le mot de passe doit contenir au moins 6 caractères",
+    "no_account": "Pas encore de compte ? Inscrivez-vous",
+    "has_account": "Déjà un compte ? Connectez-vous",
+    "forgot_password": "Mot de passe oublié ?",
+    "logout": "Déconnexion"
+  },
+  "common": {
+    "price": "{{prix}} DZD",
+    "view_details": "Voir détails"
   }
-  
 }

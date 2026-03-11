@@ -20,7 +20,8 @@
     "marron": "Brown",
     "emeraude": "Emerald",
     "ebene": "Ebony",
-    "view_details": "View details"
+    "view_details": "View details",
+    "add_to_cart": "Add to cart"
   },
   "atelier": {
     "title": "Our Workshop",
@@ -31,23 +32,105 @@
     "title": "Our Boutique in Algiers",
     "subtitle": "Come meet us",
     "address_label": "Address:",
-    "hours_label": "Hours:",
-    "phone_label": "Phone:",
-    "email_label": "Email:",
-    "rdv": "Book an appointment",
     "address": "123 Rue Didouche Mourad, Algiers Center, 16000",
+    "hours_label": "Hours:",
     "hours": "Mon - Sat: 10am - 7pm",
+    "phone_label": "Phone:",
     "phone": "+213 (0) 21 23 45 67",
-    "email": "boutique@caftanlamaa.dz"
+    "email_label": "Email:",
+    "email": "boutique@caftanlamaa.dz",
+    "rdv": "Book an appointment"
   },
   "footer": {
     "legal": "Legal Notice",
-    "terms": "Terms and Conditions",
-    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "privacy": "Privacy",
     "contact": "Contact",
     "copyright": "© 2025 Caftan Lamaa - Algerian Haute Couture. All rights reserved."
   },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Type your search...",
+    "search": "Search",
+    "suggestions": "Suggestions",
+    "results_for": "Results for",
+    "results": "results",
+    "result": "result",
+    "loading": "Searching...",
+    "no_results": "No results found.",
+    "try_again": "Try with different keywords."
+  },
+  "avis": {
+    "title": "Customer Reviews",
+    "note_moyenne": "Average rating",
+    "total_avis": "Reviews",
+    "recommandent": "Recommend",
+    "laisser_avis": "Leave a review",
+    "votre_nom": "Your name",
+    "votre_note": "Your rating",
+    "votre_commentaire": "Your comment",
+    "envoyer": "Submit review",
+    "sending": "Sending...",
+    "success": "Thank you for your review!",
+    "verified": "Verified purchase",
+    "delete": "Delete",
+    "confirm_delete": "Are you sure you want to delete this review?",
+    "avis_recents": "Recent reviews",
+    "nom_placeholder": "Ex: Mohamed A.",
+    "commentaire_placeholder": "Share your experience...",
+    "no_avis": "Be the first to leave a review!"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "info_title": "Our information",
+    "form_title": "Send us a message",
+    "map_title": "Find us",
+    "name": "Full name",
+    "name_placeholder": "Your name",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "message": "Message",
+    "message_placeholder": "Your message...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! We will reply as soon as possible.",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "hours_label": "Opening hours",
+    "hours": "Monday - Saturday: 10am - 7pm",
+    "hours_sunday": "Sunday: Closed"
+  },
+  "auth": {
+    "login_title": "Login",
+    "register_title": "Register",
+    "login": "Login",
+    "register": "Sign up",
+    "logging_in": "Logging in...",
+    "registering": "Registering...",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "password": "Password",
+    "password_placeholder": "********",
+    "confirm_password": "Confirm password",
+    "confirm_password_placeholder": "********",
+    "name": "Full name",
+    "name_placeholder": "Your name",
+    "password_mismatch": "Passwords do not match",
+    "password_short": "Password must be at least 6 characters",
+    "no_account": "Don't have an account? Sign up",
+    "has_account": "Already have an account? Login",
+    "forgot_password": "Forgot password?",
+    "logout": "Logout"
+  },
   "common": {
-    "price": "{{prix}} DZD"
+    "price": "DZD {{prix}}",
+    "view_details": "View details"
   }
 }

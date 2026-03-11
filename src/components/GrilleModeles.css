@@ -112,3 +112,21 @@
     grid-template-columns: 1fr;
   }
 }
+.btn-add-to-cart {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #b8960f;
+}

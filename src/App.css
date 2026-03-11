@@ -15,5 +15,18 @@ html {
 }
 
 section {
-  scroll-margin-top: 80px; /* pour éviter que la navbar cache le titre */
+  scroll-margin-top: 80px;
+}
+
+/* Pour le support RTL (arabe) */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .navbar-left {
+  order: 2;
+}
+
+[dir="rtl"] .navbar-right {
+  order: 1;
 }
