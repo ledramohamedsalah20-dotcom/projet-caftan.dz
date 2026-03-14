@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaCalendarAlt } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -8,10 +8,16 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [showRdvForm, setShowRdvForm] = useState(false);
+
+  // Numéro de téléphone
+  const phoneNumber = "0555552255";
+  const formattedPhone = "05 55 55 22 55";
 
   const handleChange = (e) => {
     setFormData({
@@ -28,11 +34,18 @@ const Contact = () => {
     setTimeout(() => {
       setIsLoading(false);
       setIsSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '' });
       
-      // Cacher le message après 5 secondes
       setTimeout(() => setIsSubmitted(false), 5000);
     }, 1500);
+  };
+
+  const handleRdvClick = () => {
+    // Ouvre WhatsApp avec un message pré-formaté pour prendre RDV
+    const message = encodeURIComponent(
+      "Bonjour, je souhaite prendre rendez-vous pour essayer des caftans. Merci de me contacter."
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   return (
@@ -55,7 +68,28 @@ const Contact = () => {
             <FaPhone className="info-icon" />
             <div>
               <h3>{t('contact.phone_label', 'Téléphone')}</h3>
-              <p>+213 (0) 21 23 45 67</p>
+              <p>
+                <a href={`tel:${phoneNumber}`} className="contact-phone-link">
+                  {formattedPhone}
+                </a>
+              </p>
+            </div>
+          </div>
+          
+          <div className="info-item">
+            <FaWhatsapp className="info-icon whatsapp-icon" />
+            <div>
+              <h3>{t('contact.whatsapp', 'WhatsApp')}</h3>
+              <p>
+                <a 
+                  href={`https://wa.me/${phoneNumber}`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="contact-whatsapp-link"
+                >
+                  {t('contact.whatsapp_link', 'Nous écrire sur WhatsApp')}
+                </a>
+              </p>
             </div>
           </div>
           
@@ -63,7 +97,11 @@ const Contact = () => {
             <FaEnvelope className="info-icon" />
             <div>
               <h3>{t('contact.email_label', 'Email')}</h3>
-              <p>contact@caftanlamaa.dz</p>
+              <p>
+                <a href="mailto:contact@caftanlamaa.dz" className="contact-email">
+                  contact@caftanlamaa.dz
+                </a>
+              </p>
             </div>
           </div>
           
@@ -71,6 +109,16 @@ const Contact = () => {
             <h3>{t('contact.hours_label', 'Horaires d\'ouverture')}</h3>
             <p>{t('contact.hours', 'Lundi - Samedi : 10h - 19h')}</p>
             <p>{t('contact.hours_sunday', 'Dimanche : Fermé')}</p>
+          </div>
+
+          {/* Bouton de rendez-vous direct */}
+          <div className="contact-rdv">
+            <button onClick={handleRdvClick} className="btn-rdv-contact">
+              <FaCalendarAlt /> {t('contact.rdv_button', 'Prendre rendez-vous')}
+            </button>
+            <p className="rdv-info">
+              {t('contact.rdv_info', 'Cliquez pour nous contacter sur WhatsApp et réserver votre créneau.')}
+            </p>
           </div>
         </div>
         
@@ -107,6 +155,18 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder={t('contact.email_placeholder', 'votre@email.com')}
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">{t('contact.phone', 'Téléphone')}</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder={t('contact.phone_placeholder', 'Ex: 05 55 55 22 55')}
               />
             </div>
             

@@ -1,25 +1,38 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useNavigate } from 'react-router-dom'; // Ajoute useNavigate
-import { FaFacebook, FaInstagram, FaTiktok, FaSearch, FaUser, FaShoppingCart, FaTimes, FaSignOutAlt, FaUserCircle } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import { 
+  FaFacebook, 
+  FaInstagram, 
+  FaTiktok, 
+  FaWhatsapp,
+  FaSearch, 
+  FaUser, 
+  FaShoppingCart, 
+  FaTimes, 
+  FaSignOutAlt, 
+  FaUserCircle
+} from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
-import { useAuth } from '../context/AuthContext'; // Import du contexte d'auth
+import { useAuth } from '../context/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const { cartCount, cartItems, removeFromCart, updateQuantity, cartTotal } = useCart();
-  const { user, logout } = useAuth(); // Récupère l'utilisateur et la fonction logout
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
   
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false); // Menu utilisateur
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  // Numéro de téléphone (caché mais utilisé pour les liens)
+  const phoneNumber = "0555552255";
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    // Pour l'arabe, on pourrait changer la direction du document
     if (lng === 'ar') {
       document.documentElement.dir = 'rtl';
     } else {
@@ -52,12 +65,24 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      {/* Partie gauche - Réseaux sociaux et WhatsApp uniquement */}
       <div className="navbar-left">
-        <a href="https://www.tiktok.com/@myriellecollection" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
-        <a href="https://www.instagram.com/caftan_lamaa/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a href="https://www.facebook.com/61574210993283" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+        <a href="https://www.tiktok.com/@myriellecollection" target="_blank" rel="noopener noreferrer" title="TikTok">
+          <FaTiktok />
+        </a>
+        <a href="https://www.instagram.com/caftan_lamaa/" target="_blank" rel="noopener noreferrer" title="Instagram">
+          <FaInstagram />
+        </a>
+        <a href="https://www.facebook.com/61574210993283" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <FaFacebook />
+        </a>
+        {/* WhatsApp - seule icône de contact visible */}
+        <a href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer" title="WhatsApp">
+          <FaWhatsapp />
+        </a>
       </div>
       
+      {/* Centre - Logo */}
       <div className="navbar-center">
         <Link to="/" className="brand-link">
           <h1 className="brand">
@@ -67,7 +92,10 @@ const Navbar = () => {
         </Link>
       </div>
       
+      {/* Partie droite - Actions */}
       <div className="navbar-right">
+        {/* PAS D'AFFICHAGE DU TÉLÉPHONE ICI - J'AI ENLEVÉ LA SECTION phone-display */}
+
         {/* Bouton recherche */}
         <div className="nav-icon" onClick={() => setIsSearchOpen(true)}>
           <FaSearch title={t('navbar.search')} />
@@ -163,6 +191,35 @@ const Navbar = () => {
                 <FaSearch /> {t('search.search', 'Rechercher')}
               </button>
             </form>
+            <div className="search-suggestions">
+              <p>{t('search.suggestions', 'Suggestions')} :</p>
+              <div className="suggestion-tags">
+                <span onClick={() => {
+                  navigate('/recherche?q=Rubis');
+                  setIsSearchOpen(false);
+                }}>Rubis</span>
+                <span onClick={() => {
+                  navigate('/recherche?q=Ivoire');
+                  setIsSearchOpen(false);
+                }}>Ivoire</span>
+                <span onClick={() => {
+                  navigate('/recherche?q=Saphir');
+                  setIsSearchOpen(false);
+                }}>Saphir</span>
+                <span onClick={() => {
+                  navigate('/recherche?q=Marron');
+                  setIsSearchOpen(false);
+                }}>Marron</span>
+                <span onClick={() => {
+                  navigate('/recherche?q=Émeraude');
+                  setIsSearchOpen(false);
+                }}>Émeraude</span>
+                <span onClick={() => {
+                  navigate('/recherche?q=Ébène');
+                  setIsSearchOpen(false);
+                }}>Ébène</span>
+              </div>
+            </div>
           </div>
         </>
       )}
@@ -207,10 +264,13 @@ const Navbar = () => {
                     <span>{t('cart.total', 'Total')} :</span>
                     <span className="total-price">{formatPrice(cartTotal)}</span>
                   </div>
-                  <button className="btn-checkout" onClick={() => {
-                    setIsCartOpen(false);
-                    navigate('/checkout');
-                  }}>
+                  <button 
+                    className="btn-checkout" 
+                    onClick={() => {
+                      setIsCartOpen(false);
+                      navigate('/checkout');
+                    }}
+                  >
                     {t('cart.checkout', 'Passer la commande')}
                   </button>
                 </div>

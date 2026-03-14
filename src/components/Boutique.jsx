@@ -1,13 +1,26 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { FaWhatsapp, FaCalendarAlt } from 'react-icons/fa';
 import './Boutique.css';
 
 const Boutique = () => {
   const { t } = useTranslation();
+  
+  // Numéro de téléphone
+  const phoneNumber = "0555552255";
+  const formattedPhone = "05 55 55 22 55";
+
+  const handleRdvClick = () => {
+    // Message pré-formaté pour WhatsApp
+    const message = encodeURIComponent(
+      "Bonjour, je souhaite prendre rendez-vous pour visiter votre boutique et essayer des caftans. Merci de me confirmer une disponibilité."
+    );
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
 
   return (
     <section className="boutique" id="boutique">
-      <h2>{t('boutique.title')}</h2>
+      <h2>{t('boutique.title', 'Notre Boutique à Alger')}</h2>
       <div className="boutique-container">
         <div className="boutique-map">
           <iframe
@@ -22,24 +35,49 @@ const Boutique = () => {
           ></iframe>
         </div>
         <div className="boutique-infos">
-          <h3>{t('boutique.subtitle')}</h3>
+          <h3>{t('boutique.subtitle', 'Venez nous rencontrer')}</h3>
           <div className="info-item">
-            <span className="info-label">{t('boutique.address_label')}</span>
-            <span>{t('boutique.address')}</span>
+            <span className="info-label">{t('boutique.address_label', 'Adresse')} :</span>
+            <span>123 Rue Didouche Mourad, Alger Centre, 16000</span>
           </div>
           <div className="info-item">
-            <span className="info-label">{t('boutique.hours_label')}</span>
-            <span>{t('boutique.hours')}</span>
+            <span className="info-label">{t('boutique.hours_label', 'Horaires')} :</span>
+            <span>{t('boutique.hours', 'Lun - Sam : 10h - 19h')}</span>
           </div>
           <div className="info-item">
-            <span className="info-label">{t('boutique.phone_label')}</span>
-            <span>{t('boutique.phone')}</span>
+            <span className="info-label">{t('boutique.phone_label', 'Téléphone')} :</span>
+            <div className="phone-numbers">
+              <a href={`tel:${phoneNumber}`} className="phone-link">
+                {formattedPhone}
+              </a>
+            </div>
           </div>
           <div className="info-item">
-            <span className="info-label">{t('boutique.email_label')}</span>
-            <span>{t('boutique.email')}</span>
+            <span className="info-label">WhatsApp :</span>
+            <a 
+              href={`https://wa.me/${phoneNumber}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="whatsapp-link"
+            >
+              <FaWhatsapp /> {t('boutique.whatsapp', 'WhatsApp')}
+            </a>
           </div>
-          <button className="btn-rdv">{t('boutique.rdv')}</button>
+          <div className="info-item">
+            <span className="info-label">{t('boutique.email_label', 'Email')} :</span>
+            <a href="mailto:boutique@caftanlamaa.dz" className="email-link">
+              boutique@caftanlamaa.dz
+            </a>
+          </div>
+          
+          {/* Bouton de rendez-vous avec action réelle */}
+          <button className="btn-rdv" onClick={handleRdvClick}>
+            <FaCalendarAlt /> {t('boutique.rdv', 'Prendre rendez-vous')}
+          </button>
+          
+          <p className="rdv-note">
+            {t('boutique.rdv_note', 'Réservez votre créneau pour un essai personnalisé.')}
+          </p>
         </div>
       </div>
     </section>

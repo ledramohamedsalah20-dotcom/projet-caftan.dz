@@ -24,6 +24,7 @@
   margin-bottom: 4rem;
 }
 
+/* Section informations */
 .contact-info {
   flex: 1;
   background-color: #f9f5f0;
@@ -51,6 +52,11 @@
   min-width: 2.5rem;
 }
 
+/* Style spécifique pour l'icône WhatsApp */
+.whatsapp-icon {
+  color: #25D366;
+}
+
 .info-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -60,8 +66,51 @@
 .info-item p {
   color: #666;
   line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
+/* Liens de contact */
+.contact-phone-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contact-phone-link:hover {
+  color: #d4af37;
+}
+
+.contact-whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #25D366;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background-color: rgba(37, 211, 102, 0.1);
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.contact-whatsapp-link:hover {
+  background-color: #25D366;
+  color: white;
+}
+
+.contact-email {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-email:hover {
+  color: #d4af37;
+}
+
+/* Horaires */
 .contact-hours {
   margin-top: 2rem;
   padding-top: 2rem;
@@ -79,6 +128,42 @@
   margin-bottom: 0.5rem;
 }
 
+/* Bouton de rendez-vous */
+.contact-rdv {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #d4af37;
+  text-align: center;
+}
+
+.btn-rdv-contact {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.btn-rdv-contact:hover {
+  background-color: #128C7E;
+}
+
+.rdv-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Formulaire */
 .contact-form-container {
   flex: 1.5;
   background-color: white;
@@ -159,6 +244,7 @@
   cursor: not-allowed;
 }
 
+/* Carte */
 .contact-map {
   margin-top: 4rem;
 }
@@ -176,6 +262,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;

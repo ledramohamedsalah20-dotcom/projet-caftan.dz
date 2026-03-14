@@ -36,17 +36,24 @@
     "hours_label": "Horaires :",
     "hours": "Lun - Sam : 10h - 19h",
     "phone_label": "Téléphone :",
-    "phone": "+213 (0) 21 23 45 67",
+    "phone": "05 55 55 22 55",
+    "whatsapp": "WhatsApp",
     "email_label": "Email :",
     "email": "boutique@caftanlamaa.dz",
-    "rdv": "Prendre rendez-vous"
+    "rdv": "Prendre rendez-vous",
+    "rdv_note": "Réservez votre créneau pour un essai personnalisé."
   },
   "footer": {
     "legal": "Mentions Légales",
     "terms": "CGV",
     "privacy": "Confidentialité",
     "contact": "Contact",
-    "copyright": "© 2025 Caftan Lamaa - Haute Couture Algérienne. Tous droits réservés."
+    "contact_link": "Contact",
+    "copyright": "© 2025 Caftan Lamaa - Haute Couture Algérienne. Tous droits réservés.",
+    "tagline": "Haute Couture Algérienne depuis 2025",
+    "whatsapp": "WhatsApp",
+    "links": "Liens",
+    "social": "Suivez-nous"
   },
   "cart": {
     "title": "Votre Panier",
@@ -95,6 +102,8 @@
     "name_placeholder": "Votre nom",
     "email": "Email",
     "email_placeholder": "votre@email.com",
+    "phone": "Téléphone",
+    "phone_placeholder": "Ex: 05 55 55 22 55",
     "message": "Message",
     "message_placeholder": "Votre message...",
     "send": "Envoyer le message",
@@ -105,7 +114,11 @@
     "email_label": "Email",
     "hours_label": "Horaires d'ouverture",
     "hours": "Lundi - Samedi : 10h - 19h",
-    "hours_sunday": "Dimanche : Fermé"
+    "hours_sunday": "Dimanche : Fermé",
+    "whatsapp": "WhatsApp",
+    "whatsapp_link": "Nous écrire sur WhatsApp",
+    "rdv_button": "Prendre rendez-vous",
+    "rdv_info": "Cliquez pour nous contacter sur WhatsApp et réserver votre créneau."
   },
   "auth": {
     "login_title": "Connexion",
